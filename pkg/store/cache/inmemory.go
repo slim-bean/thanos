@@ -158,7 +158,7 @@ func NewInMemoryIndexCacheWithConfig(logger log.Logger, reg prometheus.Registere
 
 	// Initialize LRU cache with a high size limit since we will manage evictions ourselves
 	// based on stored size using `RemoveOldest` method.
-	l, err := lru.NewLRU(math.MaxInt64, c.onEvict)
+	l, err := lru.NewLRU(math.MaxInt32, c.onEvict)
 	if err != nil {
 		return nil, err
 	}
