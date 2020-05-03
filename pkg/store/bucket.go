@@ -61,7 +61,7 @@ const (
 	// because you barely get any improvements in compression when the number of samples is beyond this.
 	// Take a look at Figure 6 in this whitepaper http://www.vldb.org/pvldb/vol8/p1816-teller.pdf.
 	maxSamplesPerChunk = 120
-	maxChunkSize       = 16000
+	maxChunkSize       = 32000
 	maxSeriesSize      = 64 * 1024
 
 	// CompatibilityTypeLabelName is an artificial label that Store Gateway can optionally advertise. This is required for compatibility
